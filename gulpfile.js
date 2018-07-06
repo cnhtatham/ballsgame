@@ -8,7 +8,7 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 
 gulp.task('sass', function () {
-    return gulp.src('app/scss/**/*npm.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass()) // Using gulp-sass
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({
@@ -40,5 +40,7 @@ gulp.task('browserSync', function () {
 
 gulp.task('watch', ['browserSync', 'useref'], function () {
     gulp.watch('app/scss/**/*.scss', ['sass']);
-    // Other watchers
+    gulp.watch('app/index.html', browserSync.reload);
+    gulp.watch('app/js/**/*.js', browserSync.reload);
+    gulp.watch('app/css/**/*.css', browserSync.reload);
 })

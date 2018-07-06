@@ -1,3 +1,37 @@
-body {
-    width: percentage(5/7)
+#section1 {
+  background-color: #101010;
+  padding: 3% 5%;
+  color: antiquewhite
+}
+
+#section1imgcard {
+  height: -webkit-fill-available;
+  background: url('/assets/img1.jpg') center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+#titlecard {
+  height: -webkit-fill-available;
+  background: none;
+  text-align: right;
+  vertical-align: -webkit-baseline-middle;
+  margin-top: 25vmin;
+}
+
+#welcomeText {
+  font-size: 9vmin
+}
+
+#nameText {
+  font-size: 4vmin
+}
+
+#webDeveloperText {
+  font-style: italic
+}
+
+#webDeveloperText:hover {
+  color: magenta
 }
